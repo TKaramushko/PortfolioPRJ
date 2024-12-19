@@ -11,7 +11,6 @@ const handleSubmit = () => {
   console.log('Email:', email.value);
   console.log('Message:', message.value);
 
-
   alert('Message sent successfully!');
 };
 </script>
@@ -20,7 +19,6 @@ const handleSubmit = () => {
   <section class="contact-form">
     <h2 class="form-title">Contact Us</h2>
     <form @submit.prevent="handleSubmit">
-
       <div class="form-group">
         <label for="name">Name</label>
         <input
@@ -33,7 +31,6 @@ const handleSubmit = () => {
         />
       </div>
 
-      <!-- Email Field -->
       <div class="form-group">
         <label for="email">Email</label>
         <input
@@ -45,7 +42,6 @@ const handleSubmit = () => {
             required
         />
       </div>
-
 
       <div class="form-group">
         <label for="message">Message</label>
@@ -59,7 +55,6 @@ const handleSubmit = () => {
         ></textarea>
       </div>
 
-
       <div class="form-group">
         <button type="submit" class="send-button">Send</button>
       </div>
@@ -68,7 +63,6 @@ const handleSubmit = () => {
 </template>
 
 <style scoped>
-
 .contact-form {
   max-width: 575px;
   margin: auto;
@@ -85,7 +79,6 @@ const handleSubmit = () => {
   color: #f39c12;
 }
 
-
 .form-group {
   margin-bottom: 20px;
 }
@@ -93,47 +86,33 @@ const handleSubmit = () => {
 label {
   display: block;
   margin-bottom: 8px;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   color: #f5f5f5;
 }
 
-
-.form-input {
-  width: 565px;
-  padding:10px 5px 10px 5px;
-  border: 2px solid #f39c12;
-  border-radius: 5px;
-  background-color: #343236;
-  color: #f5f5f5;
-  font-size: 1rem;
-}
-
-.form-input:focus {
-  outline: none;
-  border-color: #f39c12;
-}
-
-
+.form-input,
 .form-textarea {
-  width: calc(100% - 20px); /* Maximum width */
-  max-width: 575px; /* Explicit maximum width */
+  width: 565px;
   padding: 10px;
   border: 2px solid #f39c12;
   border-radius: 5px;
   background-color: #343236;
   color: #f5f5f5;
   font-size: 1rem;
-  resize: vertical; /* Allow vertical resizing */
 }
 
+.form-input:focus,
 .form-textarea:focus {
   outline: none;
   border-color: #f39c12;
 }
 
+.form-textarea {
+  resize: vertical;
+}
 
 .send-button {
-  width: 580px;
+  width: 590px;
   padding: 10px 20px;
   font-size: 1.2rem;
   font-weight: bold;
@@ -143,9 +122,42 @@ label {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  align-content: center;
 }
 
 .send-button:hover {
   background-color: #cc7403;
 }
+
+@media (max-width: 600px) {
+  .contact-form {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .form-title {
+    font-size: 1.75rem;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+
+  .form-input,
+  .form-textarea {
+    font-size: 0.875rem;
+    padding: 8px;
+  }
+
+  .send-button {
+    font-size: 1rem;
+    padding: 8px 16px;
+    align-content: center;
+  }
+}
 </style>
+

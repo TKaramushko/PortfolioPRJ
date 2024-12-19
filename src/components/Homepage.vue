@@ -12,8 +12,8 @@ import card2 from "./card2.vue";
         Timothy Karamushko
       </div>
       <div class="capabilities">
-        Graphic Design
-        UI/UX Design
+        Graphic Design |
+        UI/UX Design |
         Product Design
       </div>
     </header>
@@ -51,10 +51,6 @@ template{
     background-color: #343236;
   header{
 
-    div.name{
-      color: #f39c12;
-      font-size: 5rem;
-    }
 
   }
 }
@@ -62,13 +58,16 @@ template{
 div.name{
   color: #f39c12;
   font-size: 4rem;
-  padding: 2.5rem 1rem 2.5rem 1rem;
+  padding: 2.5rem 1rem 0rem 1rem;
+  font-weight: bolder;
 }
 div.capabilities{
   display: flex;
   color: #f39c12;
   font-size: 1rem;
-  padding: 1rem;
+  padding: 0.5rem;
+  margin-left: 1rem;
+  margin-bottom: 4rem;
 
 }
 div.title{
@@ -82,4 +81,29 @@ div.title{
 Section{
     background-color: #343236;
 }
+@media (max-width: 600px) {
+  div.name{
+    color: #f39c12;
+    font-size: 2rem;
+    padding: 1.25rem 0.5rem 0 0.5rem;
+  }
+  div.capabilities{
+    display: flex;
+    color: #f39c12;
+    font-size: 0.5rem;
+    padding: 0.25rem;
+    margin-left: 0.5rem;
+    margin-bottom: 2rem;
+
+  }
+  div.title{
+    color: #f39c12;
+    font-size: 1.5rem;
+    margin-right: 0.625rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    text-align: right;
+  }
+}
+
 </style>
